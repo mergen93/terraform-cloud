@@ -12,8 +12,10 @@ module "vpc" {
   enable_nat_gateway = false
   enable_vpn_gateway = false
 
-}
 
-  tag  {
-    name= DevOps
+  tags = {
+    Terraform = "true"
+    Environment = "dev"
   }
+
+}
